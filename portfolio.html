@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
     name="description"
-    content="Portfolio UX/UI di Gianni Carta: progetti e case study."
+    content="Portfolio UX/UI di Gianni Carta: progetti di ricerca, accessibilità, wireframing e UI design."
   >
 
   <title>Portfolio | GC Design</title>
@@ -28,10 +26,32 @@
         <span class="logo-subtitle">UX/UI Design by Gianni Carta</span>
       </a>
 
-      <nav class="main-nav" aria-label="Navigazione principale">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-menu"
+        aria-label="Apri il menu di navigazione"
+      >
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </button>
+
+      <nav id="main-menu" class="main-nav" aria-label="Navigazione principale">
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="portfolio.html">Portfolio</a></li>
+
+          <li>
+            <a
+              class="active"
+              href="portfolio.html"
+              aria-current="page"
+            >
+              Portfolio
+            </a>
+          </li>
+
           <li><a href="about.html">About</a></li>
           <li><a href="cv.html">CV</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -43,99 +63,152 @@
 
   <main>
 
-    <section class="hero">
-      <div class="container hero-container">
+    <section class="portfolio-intro">
+      <div class="container portfolio-intro-container">
 
-        <div class="hero-content">
+        <div class="portfolio-intro-copy">
+
           <p class="eyebrow">Portfolio</p>
 
           <h1>
             Progetti UX/UI, ricerca e progettazione di interfacce.
           </h1>
 
-          <p class="hero-description">
+          <p class="portfolio-intro-description">
             Una selezione di progetti dedicati alla comprensione dei bisogni,
-            alla definizione dei flussi e alla costruzione di esperienze
-            digitali chiare e coerenti.
+            alla definizione dei flussi e alla costruzione di esperienze digitali
+            chiare, accessibili e coerenti.
           </p>
 
-          <div class="hero-actions">
-            <a class="button button-primary" href="#jojob">
-              Scopri Jojob
-            </a>
-          </div>
+          <a class="button button-primary" href="#projects">
+            Esplora i progetti
+          </a>
+
         </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <div class="visual-grid">
-            <span>Research</span>
-            <span>UX</span>
-            <span>UI</span>
-            <span>Prototype</span>
-          </div>
-        </div>
+        <figure class="case-study-video-frame">
+
+          <video
+            class="case-study-project-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="assets/video/home-hero-jojob-poster.webp"
+            aria-label="Prototipo mobile interattivo del progetto Jojob"
+          >
+            <source
+              src="assets/video/home-hero-jojob.webm"
+              type="video/webm"
+            >
+
+            <source
+              src="assets/video/home-hero-jojob.mp4"
+              type="video/mp4"
+            >
+          </video>
+
+        </figure>
 
       </div>
     </section>
 
-    <section class="projects-section" id="jojob">
+    <section class="projects-section" id="projects">
       <div class="container">
 
         <div class="section-heading">
+
           <div>
             <p class="eyebrow">Case study</p>
-            <h2>Jojob Carpooling</h2>
+            <h2>Progetti selezionati</h2>
           </div>
+
         </div>
 
         <div class="projects-grid">
 
-          <article class="project-card">
+          <a
+            class="project-card project-card-link"
+            href="jojob.html"
+            aria-label="Esplora il case study Jojob Carpooling"
+          >
+
             <div class="project-image">
-              <span>Placeholder · Immagine principale Jojob</span>
+
+              <img
+                class="project-logo"
+                src="assets/img/jojob/jojob-logo.png"
+                alt="Logo Jojob"
+              >
+
             </div>
 
             <div class="project-content">
-              <p class="project-category">UX/UI Design · Case study</p>
 
-              <h3>Ripensare l’esperienza di carpooling</h3>
-
-              <p class="project-description">
-                Ripensamento dell’esperienza desktop e mobile di una
-                piattaforma dedicata al carpooling aziendale.
+              <p class="project-category">
+                UX/UI Design · Case study
               </p>
 
-              <ul class="project-tags" aria-label="Competenze utilizzate">
+              <h3>Jojob Carpooling</h3>
+
+              <p class="project-description">
+                Redesign dell’esperienza desktop e mobile di una piattaforma
+                dedicata al carpooling aziendale, dalla ricerca UX fino alla
+                progettazione dell’interfaccia finale.
+              </p>
+
+              <ul
+                class="project-tags"
+                aria-label="Competenze utilizzate nel progetto Jojob"
+              >
                 <li>UX Research</li>
+                <li>Accessibility</li>
                 <li>Wireframing</li>
                 <li>UI Design</li>
               </ul>
 
-              <span class="text-link text-link-disabled">
-                Case study completo in preparazione
+              <span class="text-link">
+                Esplora il case study
               </span>
+
             </div>
-          </article>
+
+          </a>
 
           <article class="project-card">
+
             <div class="project-image">
-              <span>Placeholder · Mockup o anteprima del progetto</span>
+              <span>Prossimo progetto</span>
             </div>
 
             <div class="project-content">
-              <p class="project-category">Struttura del case study</p>
 
-              <h3>Contenuti da completare</h3>
-
-              <p class="project-description">
-                Placeholder per contesto, obiettivi, processo progettuale,
-                soluzioni e risultati del progetto.
+              <p class="project-category">
+                Visual e digital design
               </p>
 
+              <h3>Progetto in sviluppo</h3>
+
+              <p class="project-description">
+                Uno spazio dedicato ai prossimi progetti sviluppati durante
+                il mio percorso nella UX/UI design.
+              </p>
+
+              <ul
+                class="project-tags"
+                aria-label="Competenze previste"
+              >
+                <li>Visual Design</li>
+                <li>Prototyping</li>
+                <li>Responsive</li>
+              </ul>
+
               <span class="text-link text-link-disabled">
-                Testi e materiali da inserire
+                Presto disponibile
               </span>
+
             </div>
+
           </article>
 
         </div>
@@ -147,6 +220,7 @@
       <div class="container contact-cta-container">
 
         <div>
+
           <p class="eyebrow">Contatti</p>
 
           <h2>
@@ -157,6 +231,7 @@
             Sono disponibile per collaborazioni, progetti UX/UI e opportunità
             professionali.
           </p>
+
         </div>
 
         <a class="button button-light" href="contact.html">
@@ -177,27 +252,23 @@
       </div>
 
       <nav aria-label="Link secondari">
+
         <ul class="footer-links">
-          <li>
-            <a href="portfolio.html">Portfolio</a>
-          </li>
-
-          <li>
-            <a href="about.html">About</a>
-          </li>
-
-          <li>
-            <a href="cv.html">CV</a>
-          </li>
-
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+
       </nav>
 
       <div class="footer-social">
-        <a href="#" target="_blank" rel="noopener noreferrer">
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           LinkedIn
         </a>
 
@@ -216,6 +287,7 @@
         >
           Portfolio artistico
         </a>
+
       </div>
 
       <p class="footer-copyright">
@@ -225,5 +297,8 @@
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
+
 </body>
+
 </html>
